@@ -1,0 +1,180 @@
+:root {
+    --red: hsl(0, 100%, 74%);
+    --green: hsl(154, 59%, 51%);
+    --blue: hsl(248, 32%, 49%);
+    --dark-blue: hsl(249, 10%, 26%);
+    --grayish-blue: hsl(246, 25%, 77%);
+}
+
+body {
+    margin: 0;
+    font-family: 'Poppins';
+    background-image: url('./images/bg-intro-mobile.png');
+    background-color: var(--red);
+    background-size: cover;
+    padding: 5em 2em;
+    
+}
+
+h1, p {
+    margin: 0;
+    color: white;
+}
+
+p {
+    text-shadow: 0 0 1px black;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 1em;
+}
+
+.try-free-btn {
+    padding: 1em 2em;
+    background-color: var(--blue);
+    border: none;
+    color: white;
+    font-size: 1.1rem;
+    border-radius: 10px;
+    box-shadow: 0 5px 2px rgba(0,0,0,0.3);
+    line-height: 1.5;
+    margin-top: 3em;
+    cursor: pointer;
+}
+
+
+.bold {
+    font-weight: 700;
+}
+
+.form-container {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    padding: 1.5em;
+    gap: 1em;
+    margin-top: 1em;
+    border-radius: 10px;
+    box-shadow: 0 5px 3px rgba(0,0,0,0.5);
+}
+
+input[type="text"], input[type="password"], input[type="email"] {
+    padding: 1em;
+    border:1px solid rgba(156, 155, 155, 0.6);
+    color: gray;
+    font-family: inherit;
+    font-weight: 600;
+    border-radius: 5px;
+    position: relative;
+    background-repeat: no-repeat;
+    background-position: 98% 50%;
+    text-indent: 0.5em;
+}
+
+.error-email::placeholder {
+    color: red;
+}
+
+input[type="submit"] {
+    background-color: var(--green);
+    margin: 0;
+    border-radius: 5px;
+    border: none;
+    padding: 1em;
+    color: white;
+    font-family: inherit;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 1.1rem;
+    box-shadow: 0 3px 1px hsl(155, 47%, 25%);
+    cursor: pointer;
+}
+
+.terms-services-txt {
+    color: var(--grayish-blue);
+    text-shadow: none;
+    font-size: 0.75rem;
+    max-width: 275px;
+    margin: 0 auto;
+}
+
+.bold-orange {
+    color: #E29593;
+    font-weight: 700;
+}
+
+.sub-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.hidden {
+    display: none;
+}
+
+.error {
+    color: red;
+    text-shadow: none;
+    text-align: end;
+    font-size: 0.75rem;
+}
+
+.error-icon {
+    width: 1.5rem;
+    height: 1.5rem;
+    position: absolute;
+}
+
+
+@media (min-width: 400px) {
+
+    body {
+        background-repeat: repeat;
+        background-size: contain;
+        height: 100vh;
+        overflow-y: hidden;
+    }
+
+    main {
+        display: block;
+        height: inherit;
+    }
+
+    h1 {
+        margin-bottom: 0.5em;
+    }
+
+    .container {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+    }
+
+    .container > div {
+        width: 500px;
+
+    }
+
+    .form-container {
+        max-width: 700px;
+    }
+
+    .try-free-btn {
+        width: 100%;
+        max-width: 700px;
+    }
+    
+    .intro-container {
+        text-align: start;
+        line-height: 1.5;
+        max-width: 500px;
+        margin-top: 1em;
+    }
+
+    .terms-services-txt {
+        max-width: 700px;
+    }
+}
